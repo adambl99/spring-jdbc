@@ -27,13 +27,7 @@ public class EmployeeController {
     public String addEmployee() {
         return "addEmployee";
     }
-    /*@PostMapping("/create")
-    public String createEmployees(@RequestParam ("id") int id, @RequestParam("employee_name") String employee_name, @RequestParam("job") String job, @RequestParam("manager") int manager, @RequestParam("hiredate") String hiredate, @RequestParam("salary") int salary, @RequestParam("commission") int commission, @RequestParam("department_number") int department_number, Model model){
-        Employees employees = new Employees(id, employee_name, job, manager, hiredate, salary, commission, department_number);
-        employeeRepository.create(employees);
-        model.addAttribute("employees", employeeRepository.getAllEntities());
-        return "employees";
-    }*/
+
     @PostMapping("/employeeAdd")
     public String employeeAdd(@RequestParam("id") int ID, @RequestParam("name") String Name,
                               @RequestParam("job") String job, @RequestParam("manager") int Manager,
