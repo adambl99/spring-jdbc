@@ -9,6 +9,7 @@ import com.example.demo.repositories.IRepository;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.Date;
@@ -22,13 +23,26 @@ public class EmployeeController {
        model.addAttribute("employees", employeeRepository.getAllEntities());
         return "employees";
     }
-    @GetMapping("/create")
-    public String createEmployee(@RequestParam ("id") int id, @RequestParam("employee_name") String employee_name, @RequestParam("job") String job, @RequestParam("manager") int manager, @RequestParam("hiredate") String hiredate, @RequestParam("salary") int salary, @RequestParam("commission") int commission, @RequestParam("department_number") int department_number, Model model){
+    @GetMapping("/addEmployee")
+    public String addEmployee() {
+        return "addEmployee";
+    }
+    /*@PostMapping("/create")
+    public String createEmployees(@RequestParam ("id") int id, @RequestParam("employee_name") String employee_name, @RequestParam("job") String job, @RequestParam("manager") int manager, @RequestParam("hiredate") String hiredate, @RequestParam("salary") int salary, @RequestParam("commission") int commission, @RequestParam("department_number") int department_number, Model model){
         Employees employees = new Employees(id, employee_name, job, manager, hiredate, salary, commission, department_number);
         employeeRepository.create(employees);
         model.addAttribute("employees", employeeRepository.getAllEntities());
         return "employees";
+    }*/
+    @PostMapping("/employeeAdd")
+    public String employeeAdd(@RequestParam("id") int ID, @RequestParam("name") String Name,
+                              @RequestParam("job") String job, @RequestParam("manager") int Manager,
+                              @RequestParam("hire_date") String hire_date, @RequestParam("salary") int salary,
+                              @RequestParam("commission") int commission, @RequestParam("departmentno") int department) {
+        Employees emp = new Employees(ID, Name, job, Manager, hire_date, salary, commission, department);
+        employeeRepository.create(emp);
+        return "redirect:/employee";
     }
+
 }
-//http://localhost:8080/create?id=420?employee_name=Adam?job=Designer?manager=10?hiredate=1010?salary=4200?commission=420?department_number=200
 

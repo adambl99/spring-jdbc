@@ -67,45 +67,6 @@ public class EmployeeRepository implements IRepository<Employees> {
         }
 
     }
-/*    public void createEmployee() {
-        String id;
-        String employee_name = "dummy";
-        String job = "dummy";
-        String manager;
-        String hiredate;
-        String salary;
-        String commission;
-        String department_number;
-
-        Scanner inputScan = new Scanner(System.in);
-        System.out.println("Employee ID: ");
-        id = inputScan.nextLine();
-        System.out.println("Employee name: ");
-        employee_name = inputScan.nextLine();
-        System.out.println("Employee job: ");
-        job = inputScan.nextLine();
-        System.out.println("Manager:  ");
-        manager = inputScan.nextLine();
-        System.out.println("Date of hire: ");
-        hiredate = inputScan.nextLine();
-        System.out.println("Salary: ");
-        salary = inputScan.nextLine();
-        System.out.println("Commission: ");
-        commission = inputScan.nextLine();
-        System.out.println("Department number: ");
-        department_number = inputScan.nextLine();
-
-        try {
-            Connection con = DatabaseConnectionManager.getConnection();
-
-            sqlString = "Insert INTO employees" +
-                    "(id, employee_name, `job`, manager, hiredate, salary, commission, department_number)" +
-                    "VALUE ('" + id + "','" + employee_name + "','" + job + "','" + manager + "','" + hiredate + "','" + salary + "','" + commission + "','" + department_number + "')";
-            stmt.executeUpdate(sqlString);
-
-        } catch (Exception e) {
-            e.printStackTrace();
-        }}*/
 
     @Override
     public boolean create(Employees entity) {

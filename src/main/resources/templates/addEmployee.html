@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Add Employee</h1>
+<form th:action="@{/employeeAdd}" method="post">
+    <section class="content">
+        <p>
+            <input type="number" id="id" placeholder="Employee ID" name="id" required/>
+        </p>
+        <p>
+            <input type="text" id="name" placeholder="Name of employee" name="name" required/>
+        </p>
+        <p>
+            <input type="text" id="job" placeholder="Jobtitle of employee" name="job" required/>
+        </p>
+        <p>
+            <input type="number" id="manager" placeholder="ID of employees manager" name="manager" required/>
+        </p>
+        <p>
+            <input type="text" id="hire_date" placeholder="Employee Hire date" name="hire_date" required/>
+        </p>
+        <p>
+            <input type="number" id="salary" placeholder="Employee salary" name="salary" required/>
+        </p>
+        <p>
+            <input type="number" id="commission" placeholder="Employee commission" name="commission" required/>
+        </p>
+        <p>
+            <input type="number" id="departmentno" placeholder="Employee department number" name="departmentno" required/>
+        </p>
+        <p>
+            <input type="submit" value="Add employee "/>
+        </p>
+    </section>
+</form>
+</body>
+</html>
