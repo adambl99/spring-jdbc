@@ -9,9 +9,15 @@
 <h1>An overview of our employees</h1>
 <table>
   <tr
-          th:each="employee : ${employees}">
-    <td th:text="${employee.getEmployeeNo()}"></td>
-    <td th:text="${employee.getEmployeeName()}"></td>
+          th:each="employees : ${employees}">
+    <td th:text="${employees.getId()}"></td>
+    <td th:text="${employees.getEmployee_name()}"></td>
+    <td th:text="${employees.getJob()}"></td>
+    <td th:text="${employees.getManager()}"></td>
+    <td th:text="${employees.getHiredate()}"></td>
+    <td th:text="${employees.getSalary()}"></td>
+    <td th:text="${employees.getCommission()}"></td>
+    <td th:text="${employees.getDepartment_number()}"></td>
   </tr>
 </table>
 
