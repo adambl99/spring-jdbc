@@ -7,12 +7,12 @@ public class Employees {
     String employee_name;
     String job;
     int manager;
-    Date hiredate;
+    String hiredate;
     int salary;
     int commission;
     int department_number;
 
-    public Employees(int id, String employee_name, String job, int manager, Date hiredate, int salary, int commission, int department_number){
+    public Employees(int id, String employee_name, String job, int manager, String hiredate, int salary, int commission, int department_number){
         this.id = id;
         this.employee_name = employee_name;
         this.job = job;
@@ -55,11 +55,11 @@ public class Employees {
         this.manager = manager;
     }
 
-    public Date getHiredate() {
+    public String getHiredate() {
         return hiredate;
     }
 
-    public void setHiredate(Date hiredate) {
+    public void setHiredate(String hiredate) {
         this.hiredate = hiredate;
     }
 

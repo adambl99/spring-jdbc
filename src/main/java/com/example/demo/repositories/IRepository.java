@@ -1,5 +1,6 @@
 package com.example.demo.repositories;
 
+import java.util.Date;
 import java.util.List;
 
 public interface IRepository<T> {
@@ -11,6 +12,7 @@ public interface IRepository<T> {
 
     //Create
     public boolean create(T entity);
+
 
     //Update
     //Delete
